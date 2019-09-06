@@ -7,11 +7,11 @@ export default class BadgeForm extends Component {
     jobTitle:'',
     twitter:''
   }
-  handleChange =  e => {
+  /* handleChange =  e => {
     this.setState({
       [e.target.name]: e.target.value
     })
-  }
+  } */
   handleClick = e => {
     console.log('Click en botón')
   }

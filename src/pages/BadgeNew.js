@@ -8,6 +8,15 @@ import BadgeForm from '../components/BadgeForm';
 import Navbar from '../components/Navbar';
 // TEMPLATE:
 export default class BadgeNew extends Component {
+  state = { form: {} }
+
+  handleChange = e => {
+    this.setState({
+      form: {
+        [e.target.name]: e.target.value,
+      }
+    })
+  }
   render() {
     return (
       <div>
@@ -25,7 +34,7 @@ export default class BadgeNew extends Component {
                 twitter='jorgehossa' />,
             </div>
             <div className="col col-md-6">
-              <BadgeForm/>
+              <BadgeForm onChange={this.handleChange} />
             </div>
           </div>
         </div>
